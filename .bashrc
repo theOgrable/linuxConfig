@@ -13,13 +13,16 @@ PS4='+ '
 bold=$(tput bold)
 red=$(tput setaf 1)
 green=$(tput setaf 2)
+yellow=$(tput setaf 3)
 blue=$(tput setaf 4)
 magenta=$(tput setaf 5)
 cyan=$(tput setaf 6)
 white=$(tput setaf 7)
+grey=$(tput setaf 8)
 clear=$(tput sgr0)
 
-PS1="\[$bold\]\[$green\]\u\[$red\]@\[$blue\]\h\[$clear\]\[$white\]:\w\[$bold\]\n\[$clear\]\[$white\](\A) \$ \[$clear\]"
+identity=`[[ $(id -u) -eq 0 ]] && echo '\[$red\]\u@\h' || echo '\[$green\]\u\[$red\]@\[$blue\]\h'`
+PS1="\[$bold\]\[$identity\]\[$clear\]\[$white\]:\w\[$bold\]\n\[$clear\]\[$white\](\A) \$ \[$clear\]"
 
 case ${TERM} in
   xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
@@ -35,6 +38,11 @@ esac
 
 alias ls='ls --color=always'
 alias cdp='cd $OLDPWD'
+
+# History suppression for following lines duplicate
+export HISTIGNORE='&'
+# Harder history control : remove all duplicate in history
+#export HISTCONTROL='erasedups'
 
 export EDITOR=vim
 export BROWSER=firefox
