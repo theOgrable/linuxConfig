@@ -1,3 +1,5 @@
+so $HOME/.vim/pluginrc/vundlerc
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -13,8 +15,10 @@ set autoread
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = "²"
-let g:mapleader = "²"
+if !exists(bepo)
+    let mapleader = "²"
+    let g:mapleader = "²"
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -36,7 +40,7 @@ set whichwrap+=<,>
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -103,13 +107,14 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Linebreak on 500 characters
-set lbr
-set tw=80
+" Linebreak on 80 characters
+"set tw=80
+"set lbr
+"set wrap "Wrap lines
+"set nolist
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcut
@@ -123,3 +128,4 @@ nmap <leader>n :set nu!<CR>
 
 " underline a line
 nmap <leader>u yypVr-
+

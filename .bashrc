@@ -46,3 +46,4 @@ export HISTIGNORE='&'
 
 export EDITOR=vim
 export BROWSER=firefox
+export PATH=$PATH:~/bin
