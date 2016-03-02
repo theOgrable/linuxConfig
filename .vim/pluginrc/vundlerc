@@ -1,0 +1,71 @@
+filetype off
+set nocompatible
+
+set runtimepath+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+"Plugin 'michamos/vim-bepo'
+Plugin 'csv.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
+"Plugin 'powerline/powerline'
+
+call vundle#end()
+
+""""""""""""""""""""""""
+"       AIRLINE        "
+""""""""""""""""""""""""
+set laststatus=2
+set ttimeoutlen=100
+let g:airline_theme='wombat'
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tmuxline#enabled = 1
+
+" for porwerline fonts
+let g:airline_powerline_fonts=1
+"if !exists('g:airline_symbols')
+"    let g:airline_symbols = {}
+"endif
+"let g:airline_symbols.space = "\ua0"
+
+
+""""""""""""""""""""""""
+"        BÉPOF         "
+""""""""""""""""""""""""
+
+let mapleader = "`"
+noremap é w
+
+let bepo = 1
+
+""""""""""""""""""""""""
+"         BÉPO         "
+""""""""""""""""""""""""
+
+"let mapleader = "`"
+"noremap à $
+"noremap ê 0
+"nnoremap ç :
+"
+"let bepo = 1
+
+
+""""""""""""""""""""""""
+"        TMUX          "
+""""""""""""""""""""""""
+
+"let g:tmuxline_powerline_separators = 0
+
+
+" this line must stay at the end of the file
+" vim: set syntax=vim:
