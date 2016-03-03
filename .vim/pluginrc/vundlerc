@@ -17,6 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
+Plugin 'Townk/vim-autoclose'
 "Plugin 'plasticboy/vim-markdown'
 "Plugin 'powerline/powerline'
 
@@ -43,8 +44,8 @@ let g:airline_powerline_fonts=1
 "        BÉPOF         "
 """"""""""""""""""""""""
 
-let mapleader = "`"
-noremap é w
+let mapleader = "é"
+let g:mapleader = "é"
 
 let bepo = 1
 
