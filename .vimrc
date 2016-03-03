@@ -15,7 +15,7 @@ set autoread
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-if !exists(bepo)
+if !exists("bepo")
     let mapleader = "²"
     let g:mapleader = "²"
 endif
